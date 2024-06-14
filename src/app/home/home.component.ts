@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { HousingLocationComponent } from '../housing-location/housing-location.component';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +12,15 @@ import { Component } from '@angular/core';
         <button class="primary" type="button">Search</button>
       </form>
     </section>
-  `,  
-  styleUrls: ['./home.component.css']
+    <section class="results">
+      <app-housing-location></app-housing-location>
+    </section>
+  `,
+  styleUrls: ['./home.component.css'],
+  imports: [
+    CommonModule, 
+    HousingLocationComponent
+  ]
 })
 export class HomeComponent {
 
