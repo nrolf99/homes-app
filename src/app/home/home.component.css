@@ -1,3 +1,7 @@
+:root {
+  --primary-color: blue;
+}
+
 .results {
   display: grid;
   column-gap: 14px;
@@ -7,7 +11,7 @@
   justify-content: space-around;
 }
 input[type="text"] {
-  border: solid 1px var(--primary-color);
+  border: solid 1px var(--primary-color, black);
   padding: 10px;
   border-radius: 8px;
   margin-right: 4px;
@@ -16,8 +20,8 @@ input[type="text"] {
 }
 button {
   padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-color);
+  border: solid 1px var(--primary-color, black);
+  background: var(--primary-color, blue);
   color: white;
   border-radius: 8px;
 }
@@ -33,35 +37,4 @@ button {
   .results {
       grid-template-columns: 1fr;
   }    
-}
-
-.listing {
-  background: var(--accent-color);
-  border-radius: 30px;
-  padding-bottom: 30px;
-}
-.listing-heading {
-  color: var(--primary-color);
-  padding: 10px 20px 0 20px;
-}
-.listing-photo {
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 30px 30px 0 0;
-}
-.listing-location {
-  padding: 10px 20px 20px 20px;
-}
-.listing-location::before {
-  content: url("/assets/location-pin.svg") / "";
-}
-section.listing a {
-  padding-left: 20px;
-  text-decoration: none;
-  color: var(--primary-color);
-}
-section.listing a::after {
-  content: "\203A";
-  margin-left: 5px;
 }
