@@ -3,7 +3,7 @@
 }
 
 .listing {
-  background: var(--accent-color);
+  background: var(--accent-color, lightblue);
   border-radius: 30px;
   padding-bottom: 30px;
 }

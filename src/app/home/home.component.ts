@@ -23,7 +23,9 @@ import {HousingLocation} from '../housinglocation';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  readonly baseUrl = 'https://angular.dev/assets/tutorials/common';
+  // readonly baseUrl = 'https://angular.dev/assets/tutorials/common';
+  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
+
   housingLocationList: HousingLocation[] = [
     {
       id: 0,
@@ -40,7 +42,7 @@ export class HomeComponent {
       name: 'A113 Transitional Housing',
       city: 'Santa Monica',
       state: 'CA',
-      photo: `${this.baseUrl}/brandon-griggs-wR11KBaB86U-unsplash.jpg`,
+      photo: `${this.baseUrl}/brandon-griggs-wR11KBaB86U-unsplash.jpg?r=${Math.floor(Math.random()*10000)}`,
       availableUnits: 0,
       wifi: false,
       laundry: true,
